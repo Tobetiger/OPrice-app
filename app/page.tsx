@@ -1,7 +1,10 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Searchbar from "@/components/Searchbar";
+import { getAllProducts } from "@/mainLib/actions";
 
-export default function Home() {
+const Home = async () => {
+  const allProducts = await getAllProducts();
+
   return (
     /* Navbar Styling (WidthWrapper) */
     <>
@@ -54,13 +57,13 @@ export default function Home() {
       <div className="mx-auto mb-32 mt-28 max-w-5xl sm:mt-26">
         <div className="mb-6 px-6 lg:px-8">
           <div className="mx-auto max-w-2xl sm:text-center">
-            <h2 className="mt-2 font-bold text-4xl text-gray-900 sm:text-4xl">
-              Trending Products
+            <h2 className="mt-2 font-bold text-2xl text-gray-900 sm:text-2xl">
+              Trending Tracked Products
             </h2>
             <div className="flex flex-wrap gap-x-8 gap-y-16">
-              {["Amazon", "Jumia", "ebay", "konga"].map((product) => (
+              {allProducts.map((product: any) => (
                 <div className="items-center font-semibold text-lg mt-4">
-                  {product}
+                  {product.title}
                 </div>
               ))}
             </div>
@@ -86,4 +89,6 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+
+export default Home;

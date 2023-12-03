@@ -13,7 +13,7 @@ export async function scrapeAmazonProduct(url: string) {
 const port = 22225;
 const session_id = (1000000 * Math.random()) | 0;
 
-const options = {
+const options: any = {
 auth: {
 username: `${username}-session-${session_id}`,
 password,
