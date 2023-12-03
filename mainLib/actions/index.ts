@@ -16,6 +16,8 @@ const scrapedProduct = await scrapeAmazonProduct(productUrl);
 
     if(!scrapedProduct) return;
 
+let product = scrapedProduct;
+
 
     const scrapeProduct = await scrapeAmazonProduct(productUrl);
   } catch (error: any) {
