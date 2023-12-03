@@ -47,3 +47,7 @@ const newProduct = await Product.findOneAndUpdate( {url: scrapedProduct.url}, pr
     throw new Error(`failed to create/update product: ${error.message}`)
   }
 }
+
+export async function getAllProducts() {
+  connectToDB();
+}
