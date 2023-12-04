@@ -1,3 +1,5 @@
+import PriceInfoCard from "@/components/PriceInfoCard";
+import { Button } from "@/components/ui/button";
 import { getProductById } from "@/mainLib/actions";
 import { formatNumber } from "@/mainLib/utils";
 import { Product } from "@/types";
@@ -72,7 +74,6 @@ const productsPage = async ({ params: { id } }: Props) => {
                 </div>
               </div>
             </div>
-
             <div className="flex items-center flex-wrap gap-10 py-6 border-y border-y-[#E4E4E4]">
               <div className="flex flex-col gap-2">
                 <p className="text-[34px] font-bold text-red-600">
@@ -84,10 +85,52 @@ const productsPage = async ({ params: { id } }: Props) => {
               </div>
             </div>
             <div className="my-7 flex flex-col gap-5">
-              <div className="flex gap-5 flex-wrap"></div>
+              <div className="flex gap-5 flex-wrap">
+                <PriceInfoCard
+                  title="Current Price"
+                  iconSrc="/assets/icons/price-tag.svg"
+                  value={`${product.currency} ${formatNumber(
+                    product.currentPrice
+                  )}`}
+                />
+                <PriceInfoCard
+                  title="Average Price"
+                  iconSrc="/assets/icons/chart.svg"
+                  value={`${product.currency} ${formatNumber(
+                    product.averagePrice
+                  )}`}
+                />
+                <PriceInfoCard
+                  title="Highest Price"
+                  iconSrc="/assets/icons/arrow-up.svg"
+                  value={`${product.currency} ${formatNumber(
+                    product.highestPrice
+                  )}`}
+                />
+                <PriceInfoCard
+                  title="Lowest Price"
+                  iconSrc="/assets/icons/arrow-down.svg"
+                  value={`${product.currency} ${formatNumber(
+                    product.lowestPrice
+                  )}`}
+                />
+              </div>
             </div>
+            Modal
           </div>
         </div>
+
+        <Button className="py-4 px-4 bg-secondary hover:bg-opacity-70 rounded-[30px] text-white text-lg font-semibold w-full mx-auto flex items-center justify-center gap-3 min-w-[200px]">
+          <Image
+            src="/assets/icons/bag.svg"
+            alt="buy now"
+            width={22}
+            height={22}
+          />
+          <Link href="/" className="text-base text-white">
+            Buy Now
+          </Link>
+        </Button>
       </div>
     </div>
   );
