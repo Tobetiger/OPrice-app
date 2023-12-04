@@ -1,4 +1,5 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import ProductCards from "@/components/ProductCards";
 import Searchbar from "@/components/Searchbar";
 import { getAllProducts } from "@/mainLib/actions";
 
@@ -60,11 +61,10 @@ const Home = async () => {
             <h2 className="mt-2 font-bold text-2xl text-gray-900 sm:text-2xl">
               Trending Tracked Products
             </h2>
+            <hr className="mt-1.5" />
             <div className="flex flex-wrap gap-x-8 gap-y-16">
-              {allProducts.map((product: any) => (
-                <div className="items-center font-semibold text-lg mt-4">
-                  {product.title}
-                </div>
+              {allProducts?.map((product) => (
+                <ProductCards key={product._id} product={product} />
               ))}
             </div>
           </div>

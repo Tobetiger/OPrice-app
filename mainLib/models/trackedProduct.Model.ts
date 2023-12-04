@@ -8,19 +8,19 @@ title: {type: String, require: true},
 currentPrice: {type: Number, require: true},
 priceHistory: [{
   price: {type: Number, require: true},
- date: {type: Date, require: true},
+ date: {type: Date, default: Date.now},
 }],
 
  lowestPrice: {type: Number},
  highestPrice: {type: Number},
  averagePrice: {type: Number},
  discountRate: {type: Number, require: true},
- category: {type: String, require: true},
+ category: {type: String},
  reviews: {type: Number},
  isOutOfStock: {type: Boolean, default: false },
 
 users: [{
-  email: {type: String, require: true},
+  email: {type: String, require: true}
 }], default: [],
 }, {timestamps: true});
 

@@ -10,14 +10,30 @@ const Navbar = () => {
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-zinc-200 ">
           <Link href="/" className="flex z-40 font-semibold">
-            <p className="text-black font-bold text-xl">
+            <p className="text-black font-bold text-2xl">
               O<span className="text-green-600 font-bold">Price</span>
             </p>
           </Link>
-          <div className=" flex flex-row gap-4 justify-between ">
-            <SearchIcon className="mt-2 gap-3 ml-2 mr-2" />
-            <Heart className="mt-2 gap-3 ml-2 mr-2" />
-            <UserCircle2Icon className=" mt-2 gap-4 mr-2" />
+          <div className=" flex flex-row gap-2 justify-between ">
+            <Link href="searchbar">
+              <Button className="bg-white text-black text-md hover:bg-green-200">
+                <Heart className="mr-2 h-4 w-4" />
+                <p>Search</p>
+              </Button>
+            </Link>
+            <Link href="/favoriteList">
+              <Button className="bg-white text-black text-md hover:bg-green-200">
+                <Heart className="mr-2 h-4 w-4" />
+                <p>Tracked</p>
+              </Button>
+            </Link>
+            <Link href="/dashboard">
+              <Button className="bg-white text-black text-md hover:bg-green-200">
+                <UserCircle2Icon className="mr-2 h-4 w-4" />
+                <p>Profile</p>
+              </Button>
+            </Link>
+
             <div className="hidden items-center space-x-4 sm:flex">
               <Button className="">Sign in</Button>
               <Button className="bg-green-600">

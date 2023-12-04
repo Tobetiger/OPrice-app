@@ -48,7 +48,7 @@ const newProduct = await Product.findOneAndUpdate( {url: scrapedProduct.url}, pr
   }
 }
 
-export async function getProductById(productUrl: string) {
+export async function getProductById(productId: string) {
 try {
   connectToDB();
 const product = await Product.findOne({ _id: productId });
@@ -65,6 +65,7 @@ export async function getAllProducts() {
   try {
     connectToDB();
     const products = await Product.find();
+    return products;
   } catch (error) {
    console.log(error) 
   }

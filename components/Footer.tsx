@@ -11,7 +11,7 @@ const Footer = () => {
               href="/"
               className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
             >
-              <span className="self-center text-2xl font-mono whitespace-nowrap dark:text-white">
+              <span className="self-center text-2xl font-bold whitespace-nowrap dark:text-white">
                 O<span className="text-green-600 font-bold">Price</span>
               </span>
             </Link>
