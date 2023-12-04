@@ -1,3 +1,4 @@
+import { formatNumber } from "@/mainLib/utils";
 import { Product } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,9 +28,11 @@ const ProductCards = ({ product }: Props) => {
           {product.title}
         </h3>
         <div className="flex justify-between">
-          <p>{product.reviewsCount}</p>
+          <p className="text-[21px] font-bold text-black/75 opacity-50 line-through">
+            {product.currency} {formatNumber(product.originalPrice)}
+          </p>
 
-          <p className="text-black text-lg font-semibold">
+          <p className="text-red-500 text-lg font-semibold">
             <span>{product?.currency}</span>
             <span>{product?.currentPrice}</span>
           </p>

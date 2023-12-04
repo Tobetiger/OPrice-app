@@ -15,7 +15,7 @@ const Navbar = () => {
             </p>
           </Link>
           <div className=" flex flex-row gap-2 justify-between ">
-            <Link href="searchbar">
+            <Link href="/">
               <Button className="bg-white text-black text-md hover:bg-green-200 -ml-2">
                 <SearchIcon className="mr-2 h-4 w-4" />
                 <p>Search</p>

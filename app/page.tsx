@@ -64,10 +64,7 @@ const Home = async () => {
           Trending Products
         </h2>
         <hr className="" />
-        <div
-          id="allTracked"
-          className="flex text-black flex-wrap gap-x-14 gap-y-16"
-        >
+        <div className="flex text-black flex-wrap gap-x-14 gap-y-16">
           {allProducts?.map((product) => (
             <ProductCards key={product._id} product={product} />
           ))}

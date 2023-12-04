@@ -75,7 +75,7 @@ const productsPage = async ({ params: { id } }: Props) => {
 
             <div className="flex items-center flex-wrap gap-10 py-6 border-y border-y-[#E4E4E4]">
               <div className="flex flex-col gap-2">
-                <p className="text-[34px] font-bold text-black">
+                <p className="text-[34px] font-bold text-red-600">
                   {product.currency} {formatNumber(product.currentPrice)}
                 </p>
                 <p className="text-[21px] font-bold text-black/75 opacity-50 line-through">
