@@ -55,35 +55,35 @@ const Home = async () => {
       </div>
 
       {/* Features of Cadis */}
-      <div className="mx-auto mb-32 mt-28 max-w-5xl sm:mt-26">
-        <div className="mb-6 px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl sm:text-center">
-            <h2 className="mt-2 font-bold text-2xl text-gray-900 sm:text-2xl">
-              Trending Tracked Products
-            </h2>
-            <hr className="mt-1.5" />
-            <div className="flex flex-wrap gap-x-8 gap-y-16">
-              {allProducts?.map((product) => (
-                <ProductCards key={product._id} product={product} />
-              ))}
-            </div>
-          </div>
-        </div>
 
-        <div>
-          <div className="relative-isolate">
+      <section
+        id="trending"
+        className="flex flex-col gap-10 px-6 md:px-20 py-24"
+      >
+        <h2 className="mt-2 -mb-6 font-bold text-2xl text-gray-900 sm:text-2xl">
+          Trending Products
+        </h2>
+        <hr className="" />
+        <div id="allTracked" className="flex flex-wrap gap-x-8 gap-y-16">
+          {allProducts?.map((product) => (
+            <ProductCards key={product._id} product={product} />
+          ))}
+        </div>
+      </section>
+
+      <div>
+        <div className="relative-isolate">
+          <div
+            arial-hidden="true"
+            className="pointer-event-none absolute inset-x-0 -top-40 -z-10 transfor-gpu overflow-hidden blur-3xl sm:-top-30"
+          >
             <div
-              arial-hidden="true"
-              className="pointer-event-none absolute inset-x-0 -top-40 -z-10 transfor-gpu overflow-hidden blur-3xl sm:-top-30"
-            >
-              <div
-                style={{
-                  clipPath:
-                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-                }}
-                className="relative up-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[5deg] bg-gradient-to-tr from-[#c5e2c2] to-[#d1e1ec] opacity-30 sm:[calc(50%-30rem)] sm:w-[72.1875rem]"
-              />
-            </div>
+              style={{
+                clipPath:
+                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+              }}
+              className="relative up-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[5deg] bg-gradient-to-tr from-[#c5e2c2] to-[#d1e1ec] opacity-30 sm:[calc(50%-30rem)] sm:w-[72.1875rem]"
+            />
           </div>
         </div>
       </div>

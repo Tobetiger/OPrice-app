@@ -45,7 +45,7 @@ const Searchbar = () => {
 
   return (
     <form id="searchbar" className="" onSubmit={handleSubmit}>
-      <div className="flex mt-8 justify-center bg-gray-50">
+      <div className="flex mt-8 justify-center bg-gray-50 ">
         <input
           type="text"
           value={searchPrompt}

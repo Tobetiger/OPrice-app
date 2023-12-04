@@ -16,19 +16,19 @@ const Navbar = () => {
           </Link>
           <div className=" flex flex-row gap-2 justify-between ">
             <Link href="searchbar">
-              <Button className="bg-white text-black text-md hover:bg-green-200">
-                <Heart className="mr-2 h-4 w-4" />
+              <Button className="bg-white text-black text-md hover:bg-green-200 -ml-2">
+                <SearchIcon className="mr-2 h-4 w-4" />
                 <p>Search</p>
               </Button>
             </Link>
             <Link href="/favoriteList">
-              <Button className="bg-white text-black text-md hover:bg-green-200">
+              <Button className="bg-white text-black text-md hover:bg-green-200 -ml-2">
                 <Heart className="mr-2 h-4 w-4" />
                 <p>Tracked</p>
               </Button>
             </Link>
             <Link href="/dashboard">
-              <Button className="bg-white text-black text-md hover:bg-green-200">
+              <Button className="bg-white text-black text-md hover:bg-green-200 -ml-2">
                 <UserCircle2Icon className="mr-2 h-4 w-4" />
                 <p>Profile</p>
               </Button>
