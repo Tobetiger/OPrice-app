@@ -25,12 +25,14 @@ const products = async ({ params: { id } }: Props) => {
             alt={product.title}
             width={580}
             height={400}
-            className="mx-auto"
+            className="mx-auto -mt-12"
           />
           <div className="flex flex-1 flex-col">
             <div className="flex justify-between items-start gap-5 flex-wrap pb-6">
               <div className="flex flex-col gap-3">
-                <p className="text-[28px] font-semibold">{product.title}</p>
+                <p className="text-[28px] font-semibold mt-8">
+                  {product.title}
+                </p>
                 <Link
                   href={product.url}
                   target="_blanck"
@@ -118,7 +120,7 @@ const products = async ({ params: { id } }: Props) => {
           </div>
         </div>
 
-        <Button className="py-4 px-4 bg-secondary hover:bg-opacity-70 rounded-[30px] text-white text-lg font-semibold w-full mx-auto flex items-center justify-center gap-3 min-w-[200px]">
+        <Button className="py-4 px-4 bg-secondary hover:bg-opacity-70 rounded-[30px] text-white bg-green-500 text-lg font-semibold w-full mx-auto flex items-center justify-center gap-3 min-w-[200px]">
           <Image
             src="/assets/icons/bag.svg"
             alt="buy now"

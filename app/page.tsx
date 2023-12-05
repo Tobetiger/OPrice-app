@@ -54,18 +54,32 @@ const Home = async () => {
         </div>
       </div>
 
-      {/* Features of Cadis */}
+      {/* Product Preview Display and All Tracked Searches */}
 
       <section
         id="trending"
-        className="flex flex-col gap-10 px-6 md:px-20 py-24"
+        className="flex flex-col gap-10 px-6 md:px-20 py-24 mx-auto"
       >
+        <h2 className="mt-2 -mb-6 mx-auto font-bold text-xl text-gray-900 sm:text-2xl">
+          Your Search Result:
+          <p className="text-lg font-semibold">
+            Click on Image Start To Tracking
+          </p>
+        </h2>
+        <div className="flex text-black mx-auto flex-wrap gap-x-14 gap-y-16 ">
+          {allProducts && allProducts.length > 0 && (
+            <ProductCards
+              key={allProducts[0]._id}
+              product={allProducts.slice().reverse()[0]}
+            />
+          )}
+        </div>
         <h2 className="mt-2 -mb-6 font-bold text-2xl text-gray-900 sm:text-2xl">
-          Trending Tracked Products
+          All Trending Tracked Products
         </h2>
         <hr className="" />
         <div className="flex text-black flex-wrap gap-x-14 gap-y-16">
-          {allProducts?.map((product) => (
+          {allProducts?.reverse().map((product) => (
             <ProductCards key={product._id} product={product} />
           ))}
         </div>

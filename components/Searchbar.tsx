@@ -33,13 +33,7 @@ const Searchbar = () => {
       if (
         hostname.includes("amazon.com") ||
         hostname.includes("amazon.") ||
-        hostname.endsWith("amazon") ||
-        hostname.includes("jumia.com") ||
-        hostname.includes("Jumia.") ||
-        hostname.endsWith("jumia") ||
-        hostname.includes("aliexpress.com") ||
-        hostname.includes("aliexpress.") ||
-        hostname.endsWith("aliexpress")
+        hostname.endsWith("amazon")
       ) {
         return true;
       }

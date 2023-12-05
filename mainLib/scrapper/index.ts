@@ -63,18 +63,20 @@ const originalPrice = extractPrice(
 // Create data structure with scrapped information
 const data = {
   url,
-  title,
+  currency: currency || '$',
   image: imageUrl[0],
-  currency: currency || "$",
+  title,
   currentPrice: Number(currentPrice) || Number(originalPrice),
   originalPrice: Number(originalPrice) || Number(currentPrice),
-  discountRate: Number(discountRate),
   priceHistory: [],
-  lowestPrice: Number(currentPrice) || Number(originalPrice),
-  highestPrice: Number(currentPrice) || Number(originalPrice),
-  average: Number(originalPrice) || (currentPrice),
+  discountRate: Number(discountRate),
+  category: 'category',
+  reviewsCount:100,
+  stars: 4.5,
   isOutOfStock: outOfStock,
-  category: "category", 
+  lowestPrice: Number(currentPrice) || Number(originalPrice),
+  highestPrice: Number(originalPrice) || Number(currentPrice),
+  averagePrice: Number(currentPrice) || Number(originalPrice),
 }
 
 console.log(data)

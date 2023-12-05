@@ -14,7 +14,7 @@ const ProductCards = ({ product }: Props) => {
       href={`/productsPage/${product._id}`}
       className="sm:w-[292px] sm:max-w-[292px] w-full flex-1 flex flex-col gap-4 rounded-md"
     >
-      <div className="flex-1 relative flex flex-col gap-5 p-4 rounded-md bg-gray-50">
+      <div className="flex-1 relative flex flex-col gap-5 p-4 rounded-lg bg-gray-50 outline outline-gray-600/50">
         <Image
           src={product.image}
           alt={product.title}
@@ -23,7 +23,7 @@ const ProductCards = ({ product }: Props) => {
           className="max-h-[250px] object-contain w-full h-full bg-transparent"
         ></Image>
       </div>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 ">
         <h3 className="text-lg leading-6 font-semibold truncate">
           {product.title}
         </h3>
