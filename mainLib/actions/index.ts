@@ -5,6 +5,8 @@ import Product from "../models/trackedProduct.Model";
 import { connectToDB } from "../mongoose";
 import { scrapeAmazonProduct } from "../scrapper";
 import { getAveragePrice, getHighestPrice, getLowestPrice } from "../utils";
+import { generateEmailBody, sendEmail } from "../nodemailer";
+import { User } from "@/types";
 
 
 
@@ -93,7 +95,6 @@ export async function getSimilarProducts(productId: string) {
    console.log(error) 
   }
 }
-
 
 export async function addUserEmailToProduct(productId: string, userEmail: string) {
   try {

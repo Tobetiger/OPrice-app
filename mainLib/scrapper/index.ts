@@ -60,8 +60,8 @@ const originalPrice = extractPrice(
   $(".a-size-base.a-color-price"),
 )
 
-// Create data structure with scrapped information
-const data = {
+ // Construct data object with scraped information
+ const data = {
   url,
   currency: currency || '$',
   image: imageUrl[0],
@@ -74,10 +74,12 @@ const data = {
   reviewsCount:100,
   stars: 4.5,
   isOutOfStock: outOfStock,
+
   lowestPrice: Number(currentPrice) || Number(originalPrice),
   highestPrice: Number(originalPrice) || Number(currentPrice),
   averagePrice: Number(currentPrice) || Number(originalPrice),
 }
+
 
 console.log(data)
 

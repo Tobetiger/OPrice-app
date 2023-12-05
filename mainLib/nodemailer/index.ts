@@ -1,7 +1,7 @@
 "use server"
 
 import { EmailContent, EmailProductInfo, NotificationType } from '@/types';
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
 const Notification = {
   WELCOME: 'WELCOME',
@@ -44,7 +44,7 @@ export async function generateEmailBody(
       break;
 
     case Notification.CHANGE_OF_STOCK:
-      subject = `${shortenedTitle} is now back in stock!`;
+      subject = `OPrice - ${shortenedTitle} is now back in stock!`;
       body = `
         <div>
           <h4>Hey, ${product.title} is now restocked! Grab yours before they run out again!</h4>
@@ -54,7 +54,7 @@ export async function generateEmailBody(
       break;
 
     case Notification.LOWEST_PRICE:
-      subject = `Lowest Price Alert for ${shortenedTitle}`;
+      subject = `OPrice - Lowest Price Alert for ${shortenedTitle}`;
       body = `
         <div>
           <h4>Hey, ${product.title} has reached its lowest price ever!!</h4>
@@ -64,7 +64,7 @@ export async function generateEmailBody(
       break;
 
     case Notification.THRESHOLD_MET:
-      subject = `Discount Alert for ${shortenedTitle}`;
+      subject = `OPrice - Discount Alert for ${shortenedTitle}`;
       body = `
         <div>
           <h4>Hey, ${product.title} is now available at a discount more than ${THRESHOLD_PERCENTAGE}%!</h4>
@@ -85,7 +85,7 @@ const transporter = nodemailer.createTransport({
   service: 'hotmail',
   port: 2525,
   auth: {
-    user: 'opriceshopping@outlook.com',
+    user: 'opricesavings@outlook.com',
     pass: process.env.EMAIL_PASSWORD,
   },
   maxConnections: 1
