@@ -33,7 +33,13 @@ const Searchbar = () => {
       if (
         hostname.includes("amazon.com") ||
         hostname.includes("amazon.") ||
-        hostname.endsWith("amazon")
+        hostname.endsWith("amazon") ||
+        hostname.includes("jumia.com") ||
+        hostname.includes("Jumia.") ||
+        hostname.endsWith("jumia") ||
+        hostname.includes("aliexpress.com") ||
+        hostname.includes("aliexpress.") ||
+        hostname.endsWith("aliexpress")
       ) {
         return true;
       }
@@ -53,7 +59,7 @@ const Searchbar = () => {
           aria-label="Search bar"
           name="search"
           placeholder="Enter product link..."
-          className="px-3 py-2 placeholder-gray-500 text-gray-800 rounded-lg border-none ring-2 ring-gray-600 focus:ring-gray-700 "
+          className="px-3 py-2 placeholder-gray-500 text-gray-800 rounded-lg border-none ring-2 ring-green-500 focus:ring-gray-700 "
         />
 
         <Button type="submit" className="ml-1">

@@ -61,7 +61,7 @@ const Home = async () => {
         className="flex flex-col gap-10 px-6 md:px-20 py-24"
       >
         <h2 className="mt-2 -mb-6 font-bold text-2xl text-gray-900 sm:text-2xl">
-          Trending Products
+          Trending Tracked Products
         </h2>
         <hr className="" />
         <div className="flex text-black flex-wrap gap-x-14 gap-y-16">

@@ -11,7 +11,7 @@ type Props = {
   params: { id: string };
 };
 
-const productsPage = async ({ params: { id } }: Props) => {
+const products = async ({ params: { id } }: Props) => {
   const product: Product = await getProductById(id);
 
   if (!product) redirect("/");
@@ -30,9 +30,7 @@ const productsPage = async ({ params: { id } }: Props) => {
           <div className="flex flex-1 flex-col">
             <div className="flex justify-between items-start gap-5 flex-wrap pb-6">
               <div className="flex flex-col gap-3">
-                <p className="text-[28px] text-secondary font-semibold">
-                  {product.title}
-                </p>
+                <p className="text-[28px] font-semibold">{product.title}</p>
                 <Link
                   href={product.url}
                   target="_blanck"
@@ -136,4 +134,4 @@ const productsPage = async ({ params: { id } }: Props) => {
   );
 };
 
-export default productsPage;
+export default products;
