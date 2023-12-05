@@ -1,3 +1,4 @@
+import Modal from "@/components/Modal";
 import PriceInfoCard from "@/components/PriceInfoCard";
 import { Button } from "@/components/ui/button";
 import { getProductById } from "@/mainLib/actions";
@@ -116,11 +117,13 @@ const products = async ({ params: { id } }: Props) => {
                 />
               </div>
             </div>
-            Modal
+            <Modal productId={id} />
           </div>
         </div>
 
-        <Button className="py-4 px-4 bg-secondary hover:bg-opacity-70 rounded-[30px] text-white bg-green-500 text-lg font-semibold w-full mx-auto flex items-center justify-center gap-3 min-w-[200px]">
+        <div className="mt-12 -mb-6"></div>
+
+        <Button className="py-4 px-4 bg-secondary hover:bg-opacity-70 rounded-xl text-white bg-green-500 text-lg font-semibold w-full mx-auto flex items-center justify-center gap-3 min-w-[200px]">
           <Image
             src="/assets/icons/bag.svg"
             alt="buy now"

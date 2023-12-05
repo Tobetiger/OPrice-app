@@ -63,7 +63,7 @@ const Home = async () => {
         <h2 className="mt-2 -mb-6 mx-auto font-bold text-xl text-gray-900 sm:text-2xl">
           Your Search Result:
           <p className="text-lg font-semibold">
-            Click on Image Start To Tracking
+            Click on image to start Tracking
           </p>
         </h2>
         <div className="flex text-black mx-auto flex-wrap gap-x-14 gap-y-16 ">

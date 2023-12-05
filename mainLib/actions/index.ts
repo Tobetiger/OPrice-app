@@ -70,6 +70,17 @@ export async function getAllProducts() {
    console.log(error) 
   }
 }
+export async function getLatestProduct() {
+  try {
+    connectToDB();
+    const latestProduct = await Product.findOne().sort({ timestamp: -1 }); // Assuming there's a timestamp field
+    return latestProduct;
+  } catch (error) {
+    console.log(error);
+  
+  }
+}
+
 export async function getSimilarProducts(productId: string) {
   try {
     connectToDB();
@@ -80,5 +91,28 @@ export async function getSimilarProducts(productId: string) {
     return similarProducts;
   } catch (error) {
    console.log(error) 
+  }
+}
+
+
+export async function addUserEmailToProduct(productId: string, userEmail: string) {
+  try {
+    const product = await Product.findById(productId);
+
+    if(!product) return;
+
+    const userExists = product.users.some((user: User) => user.email === userEmail);
+
+    if(!userExists) {
+      product.users.push({ email: userEmail });
+
+      await product.save();
+
+      const emailContent = await generateEmailBody(product, "WELCOME");
+
+      await sendEmail(emailContent, [userEmail]);
+    }
+  } catch (error) {
+    console.log(error);
   }
 }

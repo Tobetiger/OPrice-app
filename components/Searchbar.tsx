@@ -57,7 +57,7 @@ const Searchbar = () => {
         />
 
         <Button type="submit" className="ml-1">
-          {isLoading ? "Searching..." : "Search"}
+          {isLoading ? "Finding..." : "Search"}
           <SearchIcon className="ml-2 h-4 w-4" />
         </Button>
       </div>
