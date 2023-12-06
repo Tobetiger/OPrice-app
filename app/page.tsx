@@ -55,7 +55,7 @@ const Home = async () => {
       </div>
 
       {/* Product Preview Display and All Tracked Searches */}
-      <section className="mt-12 place-items-center px-6 md:px-20 py-24">
+      <section className="-mt-10 place-items-center px-6 md:px-20 py-24">
         <h2 className="-mt-5 -mb-6 font-bold text-xl text-gray-900 sm:text-2xl">
           Your Search Result:
           <p className="text-lg font-semibold">
