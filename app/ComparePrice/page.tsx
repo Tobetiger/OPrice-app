@@ -7,7 +7,9 @@ const ComparePrice = () => {
       <h1 className="text-8xl text-white font-semibold ml-8">
         Price Comparison
       </h1>
-      <h1 className="text-8xl text-white font-semibold">COMING SOON!</h1>
+      <h1 className="text-8xl text-white font-semibold">
+        COMING <span className="text-green-500">SOON!</span>
+      </h1>
     </div>
   );
 };
