@@ -41,6 +41,16 @@ const NavBar = () => {
                   Search
                 </Link>
                 <Link
+                  href="/ComparePrice"
+                  className={buttonVariants({
+                    variant: "ghost",
+                    className: "hover:bg-green-200",
+                    size: "sm",
+                  })}
+                >
+                  Compare Price
+                </Link>
+                <Link
                   href="/Trending"
                   className={buttonVariants({
                     variant: "ghost",
@@ -81,6 +91,16 @@ const NavBar = () => {
                   Search
                 </Link>
                 <Link
+                  href="/ComparePrice"
+                  className={buttonVariants({
+                    variant: "ghost",
+                    className: "hover:bg-green-200",
+                    size: "sm",
+                  })}
+                >
+                  Compare Price
+                </Link>
+                <Link
                   href="/Trending"
                   className={buttonVariants({
                     variant: "ghost",
@@ -88,7 +108,7 @@ const NavBar = () => {
                     size: "sm",
                   })}
                 >
-                  Trending
+                  Tracked
                 </Link>
 
                 <UserAccountNav

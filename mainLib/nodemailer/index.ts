@@ -54,7 +54,7 @@ export async function generateEmailBody(
       break;
 
     case Notification.LOWEST_PRICE:
-      subject = `OPrice - Lowest Price Alert for ${shortenedTitle}`;
+      subject = `OPrice - Low Price Detection Alert for ${shortenedTitle}`;
       body = `
         <div>
           <h4>Hey, ${product.title} has reached its lowest price ever!!</h4>

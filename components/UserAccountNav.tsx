@@ -71,6 +71,11 @@ const UserAccountNav = async ({
         <DropdownMenuSeparator />
 
         <DropdownMenuItem asChild>
+          <Link href="/ComparePrice">Compare Price</Link>
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+
+        <DropdownMenuItem asChild>
           <Link href="/Trending">Tracked</Link>
         </DropdownMenuItem>
 
