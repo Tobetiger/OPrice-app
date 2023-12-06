@@ -55,12 +55,8 @@ const Home = async () => {
       </div>
 
       {/* Product Preview Display and All Tracked Searches */}
-
-      <section
-        id="trending"
-        className="flex flex-col gap-10 px-6 md:px-20 py-24 mx-auto"
-      >
-        <h2 className="mt-2 -mb-6 mx-auto font-bold text-xl text-gray-900 sm:text-2xl">
+      <section className="mt-12 place-items-center px-6 md:px-20 py-24">
+        <h2 className="-mt-5 -mb-6 font-bold text-xl text-gray-900 sm:text-2xl">
           Your Search Result:
           <p className="text-lg font-semibold">
             Click on image to start Tracking
@@ -74,8 +70,14 @@ const Home = async () => {
             />
           )}
         </div>
+      </section>
+
+      <section
+        id="trending"
+        className="flex flex-col gap-10 px-6 md:px-20 py-24 mx-auto"
+      >
         <h2 className="mt-2 -mb-6 font-bold text-2xl text-gray-900 sm:text-2xl">
-          All Trending Tracked Products
+          Recently Tracked Products
         </h2>
         <hr className="" />
         <div className="flex text-black flex-wrap gap-x-14 gap-y-16">

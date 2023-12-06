@@ -72,16 +72,7 @@ export async function getAllProducts() {
    console.log(error) 
   }
 }
-export async function getLatestProduct() {
-  try {
-    connectToDB();
-    const latestProduct = await Product.findOne().sort({ timestamp: -1 }); // Assuming there's a timestamp field
-    return latestProduct;
-  } catch (error) {
-    console.log(error);
-  
-  }
-}
+
 
 export async function getSimilarProducts(productId: string) {
   try {

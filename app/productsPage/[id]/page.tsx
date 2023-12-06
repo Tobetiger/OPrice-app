@@ -81,7 +81,7 @@ const products = async ({ params: { id } }: Props) => {
                   {product.currency} {formatNumber(product.currentPrice)}
                 </p>
                 <p className="text-[21px] font-bold text-black/75 opacity-50 line-through">
-                  {product.currency} {formatNumber(product.originalPrice)}
+                  {product.currency} {formatNumber(product.highestPrice)}
                 </p>
               </div>
             </div>

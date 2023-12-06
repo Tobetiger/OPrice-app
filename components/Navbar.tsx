@@ -21,7 +21,7 @@ const Navbar = () => {
                 <p>Search</p>
               </Button>
             </Link>
-            <Link href="/favoriteList">
+            <Link href="/Trending">
               <Button className="bg-white text-black text-md hover:bg-green-200 -ml-2">
                 <Heart className="mr-2 h-4 w-4" />
                 <p>Tracked</p>

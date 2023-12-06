@@ -29,7 +29,7 @@ const DisplayLatestProduct = ({ latestProduct }: Props) => {
         </h3>
         <div className="flex justify-between">
           <p className="text-[21px] font-bold text-black/75 opacity-50 line-through">
-            {latestProduct.currency} {formatNumber(latestProduct.originalPrice)}
+            {latestProduct.currency} {formatNumber(latestProduct.highestPrice)}
           </p>
 
           <p className="text-red-500 text-lg font-semibold">
