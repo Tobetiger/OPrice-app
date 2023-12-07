@@ -55,22 +55,6 @@ const Home = async () => {
       </div>
 
       {/* Product Preview Display and All Tracked Searches */}
-      <section className="-mt-2 place-items-center px-6 md:px-10 py-10">
-        <h2 className="-mt-5 -mb-6 font-bold text-xl text-gray-900 sm:text-2xl">
-          Your Search Result:
-          <p className="text-lg font-semibold">
-            Click on image to start Tracking
-          </p>
-        </h2>
-        <div className="flex text-black mx-auto flex-wrap gap-x-14 gap-y-16 ">
-          {allProducts && allProducts.length > 0 && (
-            <ProductCards
-              key={allProducts[0]._id}
-              product={allProducts.slice().reverse()[0]}
-            />
-          )}
-        </div>
-      </section>
 
       <section
         id="trending"
