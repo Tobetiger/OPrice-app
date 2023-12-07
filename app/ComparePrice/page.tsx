@@ -5,7 +5,7 @@ const ComparePrice = () => {
   return (
     <div className="h-screen bg-gray-900 justify-center items-center flex">
       <h1 className="text-8xl text-white font-semibold ml-8">
-        Price Comparison
+        <span className="text-green-500">Price</span> Comparison
       </h1>
       <h1 className="text-8xl text-white font-semibold">
         COMING <span className="text-green-500">SOON!</span>

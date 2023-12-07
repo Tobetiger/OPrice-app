@@ -26,7 +26,7 @@ export async function generateEmailBody(
 
   switch (type) {
     case Notification.WELCOME:
-      subject = `Welcome to OPrice Product Price Tracking for ${shortenedTitle}`;
+      subject = `Welcome - OPrice Product Price Tracking for ${shortenedTitle}`;
       body = `
         <div>
           <h2>Hi, Welcome to OPrice 🚀</h2>
@@ -93,7 +93,7 @@ const transporter = nodemailer.createTransport({
 
 export const sendEmail = async (emailContent: EmailContent, sendTo: string[]) => {
   const mailOptions = {
-    from: 'opriceshopping@outlook.com',
+    from: 'opricesavings@outlook.com',
     to: sendTo,
     html: emailContent.body,
     subject: emailContent.subject,
