@@ -7,7 +7,7 @@ import Product from "@/mainLib/models/trackedProduct.Model";
 import { generateEmailBody, sendEmail } from "@/mainLib/nodemailer";
 import { scrapeAmazonProduct } from "@/mainLib/scrapper";
 
-export const maxDuration = 10; // This function can run for a maximum of 10 seconds for hobby plan and 300 for pro
+export const maxDuration = 8; // This function can run for a maximum of 10 seconds for hobby plan and 300 for pro
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
