@@ -1,9 +1,11 @@
 "use client";
 
+import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/server";
 import { ArrowRight, Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { buttonVariants } from "./ui/button";
 
 const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
   const [isOpen, setOpen] = useState<boolean>(false);
@@ -35,24 +37,25 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
             {!isAuth ? (
               <>
                 <li>
-                  <Link
-                    onClick={() => closeOnCurrent("/sign-up")}
-                    className="flex items-center w-full font-semibold text-blue-600"
-                    href="/sign-up"
-                  >
-                    Get started
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </li>
-                <li className="my-3 h-px w-full bg-gray-300" />
-                <li>
-                  <Link
-                    onClick={() => closeOnCurrent("/sign-in")}
-                    className="flex items-center w-full font-semibold"
-                    href="/sign-in"
+                  <li>
+                    <RegisterLink
+                      className={buttonVariants({
+                        size: "sm",
+                      })}
+                    >
+                      Get Started <ArrowRight className="ml-1.5 h-5 w-5" />
+                    </RegisterLink>
+                  </li>
+                  <li className="my-3 h-px w-full bg-gray-300" />
+                  <LoginLink
+                    className={buttonVariants({
+                      variant: "ghost",
+                      size: "sm",
+                      className: "hover:bg-green-200",
+                    })}
                   >
                     Sign in
-                  </Link>
+                  </LoginLink>
                 </li>
                 <li className="my-3 h-px w-full bg-gray-300" />
                 <li>
@@ -62,6 +65,26 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
                     href="/pricing"
                   >
                     Pricing
+                  </Link>
+                </li>
+                <li className="my-3 h-px w-full bg-gray-300" />
+                <li>
+                  <Link
+                    onClick={() => closeOnCurrent("/pricing")}
+                    className="flex items-center w-full font-semibold"
+                    href="/ComparePrice"
+                  >
+                    Comapre Price
+                  </Link>
+                </li>
+                <li className="my-3 h-px w-full bg-gray-300" />
+                <li>
+                  <Link
+                    onClick={() => closeOnCurrent("/pricing")}
+                    className="flex items-center w-full font-semibold"
+                    href="/Trending"
+                  >
+                    Tracked
                   </Link>
                 </li>
               </>
