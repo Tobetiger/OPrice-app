@@ -1,5 +1,4 @@
-{
-  /**import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import ProductCards from "@/components/ProductCards";
 import Searchbar from "@/components/Searchbar";
 import { getAllProducts } from "@/mainLib/actions";
@@ -8,7 +7,7 @@ const Home = async () => {
   const allProducts = await getAllProducts();
 
   return (
-
+    /* Navbar Styling (WidthWrapper) */
     <>
       <MaxWidthWrapper className="mb-4 mt-4 sm:mt-20 flex flex-col items-center justify-center text-center">
         <h1 className="max-w-4xl text-5xl  font-bold md:text-6xl lg:text-7xl">
@@ -55,7 +54,7 @@ const Home = async () => {
         </div>
       </div>
 
-      
+      {/* Product Preview Display and All Tracked Searches */}
       <section className="-mt-2 place-items-center px-6 md:px-10 py-10">
         <h2 className="-mt-5 -mb-6 font-bold text-xl text-gray-900 sm:text-2xl">
           Your Search Result:
@@ -109,5 +108,3 @@ const Home = async () => {
 };
 
 export default Home;
-*/
-}
