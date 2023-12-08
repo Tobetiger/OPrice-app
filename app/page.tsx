@@ -23,7 +23,6 @@ const Home = async () => {
           Simply Select a Product and Start Tracking
         </p>
 
-        <Searchbar />
         <div className="mt-4 ">
           <Link href="/NameSearch">
             <Button>Search with name</Button>
