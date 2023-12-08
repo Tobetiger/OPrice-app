@@ -4,19 +4,21 @@ import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/server";
 import { ArrowRight, Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { buttonVariants } from "./ui/button";
 
 const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
   const [isOpen, setOpen] = useState<boolean>(false);
 
-  const toggleOpen = () => setOpen((prev) => !prev);
+  const toggleOpen = useCallback(() => {
+    setOpen((prev) => !prev);
+  }, []); // Empty dependency array as toggleOpen doesn't depend on any props or state
 
   const pathname = usePathname();
 
   useEffect(() => {
     if (isOpen) toggleOpen();
-  }, [isOpen, toggleOpen, pathname]); // Include toggleOpen in the dependency array
+  }, [isOpen, toggleOpen, pathname]);
 
   const closeOnCurrent = (href: string) => {
     if (pathname === href) {
