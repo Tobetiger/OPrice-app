@@ -1,9 +1,7 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import ProductCards from "@/components/ProductCards";
 import Searchbar from "@/components/Searchbar";
-import { Button } from "@/components/ui/button";
 import { getAllProducts } from "@/mainLib/actions";
-import Link from "next/link";
 
 const Home = async () => {
   const allProducts = await getAllProducts();
@@ -12,10 +10,15 @@ const Home = async () => {
     /* Navbar Styling (WidthWrapper) */
     <>
       <MaxWidthWrapper className="mb-4 mt-4 sm:mt-20 flex flex-col items-center justify-center text-center">
-        <h1 className="max-w-4xl text-5xl  font-bold md:text-6xl lg:text-7xl">
-          Give Your{" "}
-          <span className="text-green-500 border-black ">SHOPPING</span>{" "}
-          Super-Powers
+        <h1 className="max-w-4xl text-2xl  font-bold md:text-3xl lg:text-4xl">
+          Start Searching with
+          <p>
+            <span className="text-green-500 border-black ">Product Name</span>{" "}
+            on our
+          </p>
+          <p>
+            <span className="text-red-500">Top Stores.</span>
+          </p>
         </h1>
         <p className="mt-5 max-w-prose text-zinc-700 sm:text-md ">
           O<span className="text-green-600">Price</span> Allows You To Track The
@@ -24,14 +27,6 @@ const Home = async () => {
         </p>
 
         <Searchbar />
-        <div className="mt-4 ">
-          <Link href="/NameSearch">
-            <Button>Search with name</Button>
-          </Link>
-          <Link href="/LinkSearch">
-            <Button className="bg-gray-900 ">Search with link</Button>
-          </Link>
-        </div>
       </MaxWidthWrapper>
 
       <div>
@@ -65,6 +60,37 @@ const Home = async () => {
       </div>
 
       {/* Product Preview Display and All Tracked Searches */}
+      <section className="-mt-2 place-items-center px-6 md:px-10 py-10">
+        <h2 className="-mt-5 -mb-6 font-bold text-xl text-gray-900 sm:text-2xl">
+          Your Search Result:
+          <p className="text-lg font-semibold">
+            Click on image to start Tracking
+          </p>
+        </h2>
+        <div className="flex text-black mx-auto flex-wrap gap-x-14 gap-y-16 ">
+          {allProducts && allProducts.length > 0 && (
+            <ProductCards
+              key={allProducts[0]._id}
+              product={allProducts.slice().reverse()[0]}
+            />
+          )}
+        </div>
+      </section>
+
+      <section
+        id="trending"
+        className="flex flex-col gap-10 px-6 md:px-20 py-24 mx-auto"
+      >
+        <h2 className="mt-2 -mb-6 font-bold text-2xl text-gray-900 sm:text-2xl">
+          Recently Tracked Products
+        </h2>
+        <hr className="" />
+        <div className="flex text-black flex-wrap gap-x-14 gap-y-16">
+          {allProducts?.reverse().map((product) => (
+            <ProductCards key={product._id} product={product} />
+          ))}
+        </div>
+      </section>
 
       <div>
         <div className="relative-isolate">

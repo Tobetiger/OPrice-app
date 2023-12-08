@@ -11,9 +11,8 @@ const Home = async () => {
     <>
       <MaxWidthWrapper className="mb-4 mt-4 sm:mt-20 flex flex-col items-center justify-center text-center">
         <h1 className="max-w-4xl text-5xl  font-bold md:text-6xl lg:text-7xl">
-          Give Your{" "}
-          <span className="text-green-500 border-black ">SHOPPING</span>{" "}
-          Super-Powers
+          Start Searching with{" "}
+          <span className="text-green-500 border-black ">Product</span> Name.
         </h1>
         <p className="mt-5 max-w-prose text-zinc-700 sm:text-md ">
           O<span className="text-green-600">Price</span> Allows You To Track The
