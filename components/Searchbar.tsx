@@ -6,6 +6,7 @@ import { SearchIcon } from "lucide-react";
 
 import { Button } from "./ui/button";
 import { scrapeAndStoreProduct } from "@/mainLib/actions";
+import { cn } from "@/lib/utils";
 
 const Searchbar = () => {
   const [searchPrompt, setSearchPrompt] = useState("");
@@ -53,10 +54,10 @@ const Searchbar = () => {
           aria-label="Search bar"
           name="search"
           placeholder="Enter product link..."
-          className="px-3 py-2 placeholder-gray-500 text-gray-800 rounded-lg border-none ring-2 ring-green-500 focus:ring-gray-700 "
+          className="px-3 py-2 placeholder-gray-500 text-gray-800 rounded-lg border-none ring-2 ring-gray-900 focus:ring-gray-700 "
         />
 
-        <Button type="submit" className="ml-1">
+        <Button type="submit" className={cn("ml-1 bg-black")}>
           {isLoading ? "Finding..." : "Search"}
           <SearchIcon className="ml-2 h-4 w-4" />
         </Button>

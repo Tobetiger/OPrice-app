@@ -30,36 +30,48 @@ const NavBar = () => {
           <div className="hidden items-center space-x-4 sm:flex">
             {!user ? (
               <>
-                <Link
-                  href="/"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    className: "hover:bg-green-200",
-                    size: "sm",
-                  })}
-                >
-                  Search
-                </Link>
-                <Link
-                  href="/ComparePrice"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    className: "hover:bg-green-200",
-                    size: "sm",
-                  })}
-                >
-                  Compare Price
-                </Link>
-                <Link
-                  href="/Trending"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    className: "hover:bg-green-200",
-                    size: "sm",
-                  })}
-                >
-                  Tracked
-                </Link>
+                <div className="">
+                  <Link
+                    href="/"
+                    className={buttonVariants({
+                      variant: "ghost",
+                      className: "hover:bg-green-200",
+                      size: "sm",
+                    })}
+                  >
+                    Top Stores
+                  </Link>
+                  <Link
+                    href="/"
+                    className={buttonVariants({
+                      variant: "ghost",
+                      className: "hover:bg-green-200",
+                      size: "sm",
+                    })}
+                  >
+                    Travels
+                  </Link>
+                  <Link
+                    href="/ComparePrice"
+                    className={buttonVariants({
+                      variant: "ghost",
+                      className: "hover:bg-green-200",
+                      size: "sm",
+                    })}
+                  >
+                    Compare Price
+                  </Link>
+                  <Link
+                    href="/Trending"
+                    className={buttonVariants({
+                      variant: "ghost",
+                      className: "hover:bg-green-200",
+                      size: "sm",
+                    })}
+                  >
+                    Tracked
+                  </Link>
+                </div>
 
                 <LoginLink
                   className={buttonVariants({
@@ -88,7 +100,17 @@ const NavBar = () => {
                     size: "sm",
                   })}
                 >
-                  Search
+                  Top Stores
+                </Link>
+                <Link
+                  href="/"
+                  className={buttonVariants({
+                    variant: "ghost",
+                    className: "hover:bg-green-200",
+                    size: "sm",
+                  })}
+                >
+                  Travels
                 </Link>
                 <Link
                   href="/ComparePrice"
