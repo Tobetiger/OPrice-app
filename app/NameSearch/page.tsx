@@ -26,7 +26,11 @@ const Home = async () => {
           Simply Select a Product and Start Tracking
         </p>
 
-        <Searchbar />
+        {/* <Searchbar  /> */}
+        <p className="text-4xl font-semibold mt-8 mb-8">
+          Coming
+          <span className="text-green-500 border-black "> Soon</span>{" "}
+        </p>
       </MaxWidthWrapper>
 
       <div>
