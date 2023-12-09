@@ -12,8 +12,9 @@ const page = async () => {
           All Trending Tracked Products
         </h2>
         <hr className="" />
-        <div className="flex flex-wrap gap-x-8 gap-y-16">
-          {allProducts?.map((product) => (
+
+        <div className="flex text-black flex-wrap gap-x-14 gap-y-16">
+          {allProducts?.reverse().map((product) => (
             <ProductCards key={product._id} product={product} />
           ))}
         </div>

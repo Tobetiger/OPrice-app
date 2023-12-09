@@ -90,7 +90,6 @@ const Home = async () => {
           ))}
         </div>
       </section>
-
       <div>
         <div className="relative-isolate">
           <div
