@@ -96,14 +96,17 @@ export function TopStores() {
           <NavigationMenuTrigger>Top Stores</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              <ListItem href="/LinkSearch" title="No.1">
-                Search Using Product Link.
+              <ListItem href="/LinkSearch" title="Amazon Store">
+                Amazon
               </ListItem>
-              <ListItem href="/NameSearch" title="No.2">
-                Search Using Product Name.
+              <ListItem href="/NameSearch" title="Jumia Store">
+                Jumia
               </ListItem>
-              <ListItem href="/OpriceTravels" title="Cheap Travel Deals">
-                Travel VISA, PASSPORT, FLIGHTS BOOKING...etc
+              <ListItem href="/OpriceTravels" title="ALiexpress Store">
+                Aliexpress
+              </ListItem>
+              <ListItem href="/OpriceTravels" title="Alibaba Store">
+                Alibaba
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -112,14 +115,16 @@ export function TopStores() {
           <NavigationMenuTrigger>Travel Deals</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              <ListItem href="/LinkSearch" title="No.1">
-                Cheap Travel VISA Booking.
+              <ListItem href="/LinkSearch" title="VISA">
+                <p>Canadian Visa</p>
+                <p>Chiness Visa</p>
               </ListItem>
-              <ListItem href="/NameSearch" title="No.2">
-                Search Using Product Name.
+              <ListItem href="/NameSearch" title="PASSPORT">
+                <p>Mauritus Passport</p>
+                <p>Nigerian International Passport</p>
               </ListItem>
-              <ListItem href="/OpriceTravels" title="Cheap Travel Deals">
-                Travel VISA, PASSPORT, FLIGHTS BOOKING...etc
+              <ListItem href="/OpriceTravels" title="FLIGHTS">
+                Flight Booking to all Location
               </ListItem>
             </ul>
           </NavigationMenuContent>
