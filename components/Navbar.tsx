@@ -6,7 +6,6 @@ import {
   RegisterLink,
   LoginLink,
   getKindeServerSession,
-  LogoutLink,
 } from "@kinde-oss/kinde-auth-nextjs/server";
 import { ArrowRight } from "lucide-react";
 import UserAccountNav from "./UserAccountNav";
