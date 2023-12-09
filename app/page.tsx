@@ -13,8 +13,7 @@ const Home = async () => {
     <>
       <MaxWidthWrapper className="mb-4 mt-4 sm:mt-20 flex flex-col items-center justify-center text-center">
         <h1 className="max-w-4xl text-5xl  font-bold md:text-6xl lg:text-7xl">
-          Give Your{" "}
-          <span className="text-green-500 border-black ">SHOPPING</span>{" "}
+          Give Your <span className="text-green-500 border-black ">WALLET</span>{" "}
           Super-Powers
         </h1>
         <p className="mt-5 max-w-prose text-zinc-700 sm:text-md ">
@@ -23,12 +22,14 @@ const Home = async () => {
           Simply Select a Product and Start Tracking
         </p>
 
-        <div className="mt-4 ">
+        <div className="mt-4 flex flex-col md:flex-row gap-4">
           <Link href="/NameSearch">
-            <Button>Search with name</Button>
+            <Button className="w-full md:w-auto">Search with name</Button>
           </Link>
           <Link href="/LinkSearch">
-            <Button className="bg-gray-900 ">Search with link</Button>
+            <Button className="w-full md:w-auto bg-gray-900">
+              Search with link
+            </Button>
           </Link>
         </div>
       </MaxWidthWrapper>
