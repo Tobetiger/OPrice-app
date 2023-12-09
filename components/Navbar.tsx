@@ -10,6 +10,7 @@ import {
 import { ArrowRight } from "lucide-react";
 import UserAccountNav from "./UserAccountNav";
 import MobileNav from "./MobileNav";
+import { TopStores } from "./TopStores";
 
 const NavBar = () => {
   const { getUser } = getKindeServerSession();
@@ -30,36 +31,8 @@ const NavBar = () => {
             {!user ? (
               <>
                 <div className="">
-                  <Link
-                    href="/"
-                    className={buttonVariants({
-                      variant: "ghost",
-                      className: "hover:bg-green-200",
-                      size: "sm",
-                    })}
-                  >
-                    Search
-                  </Link>
-                  <Link
-                    href="/"
-                    className={buttonVariants({
-                      variant: "ghost",
-                      className: "hover:bg-green-200",
-                      size: "sm",
-                    })}
-                  >
-                    Top Stores
-                  </Link>
-                  <Link
-                    href="/"
-                    className={buttonVariants({
-                      variant: "ghost",
-                      className: "hover:bg-green-200",
-                      size: "sm",
-                    })}
-                  >
-                    Travels
-                  </Link>
+                  <TopStores />
+
                   <Link
                     href="/ComparePrice"
                     className={buttonVariants({
@@ -101,36 +74,8 @@ const NavBar = () => {
               </>
             ) : (
               <>
-                <Link
-                  href="/"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    className: "hover:bg-green-200",
-                    size: "sm",
-                  })}
-                >
-                  Search
-                </Link>
-                <Link
-                  href="/"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    className: "hover:bg-green-200",
-                    size: "sm",
-                  })}
-                >
-                  Top Stores
-                </Link>
-                <Link
-                  href="/"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    className: "hover:bg-green-200",
-                    size: "sm",
-                  })}
-                >
-                  Travels
-                </Link>
+                <TopStores />
+
                 <Link
                   href="/ComparePrice"
                   className={buttonVariants({
