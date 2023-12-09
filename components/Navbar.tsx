@@ -32,27 +32,6 @@ const NavBar = () => {
               <>
                 <div className="">
                   <TopStores />
-
-                  <Link
-                    href="/ComparePrice"
-                    className={buttonVariants({
-                      variant: "ghost",
-                      className: "hover:bg-green-200",
-                      size: "sm",
-                    })}
-                  >
-                    Compare Price
-                  </Link>
-                  <Link
-                    href="/Trending"
-                    className={buttonVariants({
-                      variant: "ghost",
-                      className: "hover:bg-green-200",
-                      size: "sm",
-                    })}
-                  >
-                    Tracked
-                  </Link>
                 </div>
 
                 <LoginLink
@@ -75,27 +54,6 @@ const NavBar = () => {
             ) : (
               <>
                 <TopStores />
-
-                <Link
-                  href="/ComparePrice"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    className: "hover:bg-green-200",
-                    size: "sm",
-                  })}
-                >
-                  Compare Price
-                </Link>
-                <Link
-                  href="/Trending"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    className: "hover:bg-green-200",
-                    size: "sm",
-                  })}
-                >
-                  Tracked
-                </Link>
 
                 <UserAccountNav
                   name={
